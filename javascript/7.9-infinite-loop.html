@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hangman</title>
+	<style>
+		img {
+			display:block;
+  			width:100%; height:100%;
+  			object-fit: cover;
+		}
+	</style>
+</head>
+
+<body>
+	<a href="../index.htm"><img src="../picsandgifs/omfgdogs.gif" alt="Home"></a>
+	<a href="../index.htm"><img src="../picsandgifs/omfgdogs.gif" alt="Home"></a>
+	<a href="../index.htm"><img src="../picsandgifs/omfgdogs.gif" alt="Home"></a>
+	<script type="text/javascript">
+		var t = true;
+		var dollar;
+		var yen;
+		/*
+		dollar = prompt("How much money do you want to convert to yen(in dollars)");
+		console.log(typeof(dollar));
+		console.log(dollar);
+		*/
+		while (t) {
+			dollar = prompt("How much money do you want to convert to yen(in dollars)");
+			if (dollar == null) {
+				break;
+			}
+			yen = Number(dollar) * 112.17;
+			alert(yen)
+		}
+		
+	</script>
+	
+</body>
+</html>

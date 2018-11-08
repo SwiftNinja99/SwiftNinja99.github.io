@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.13 - switch program</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var program = prompt("Enter F to convert Fahrenheit to Celsius\n\nEnter C to convert Celsius to Fahrenheit\n\nEnter D to convert Dollar to Yen\n\nEnter Y to convert Yen to Dollar");
+		program = program.toUpperCase();
+		var dollar;
+		var yen;
+		var f;
+		var celc;
+		while (true) {
+			if( program == "") {
+				break;
+			}
+			switch(program) {
+				case "F":
+					f = prompt("Convert Fahrenheit to Celcius");
+					f = parseInt(f, 10)
+					celc = ((f-32)*5)/9
+					alert(f + "Fº = " + celc + "Cº");
+					break;
+				case "C":
+					f = prompt("Convert Fahrenheit to Celcius");
+					f = parseInt(f, 10)
+					celc = ((f-32)*5)/9
+					alert(celc + "Cº = " + f + "Fº");
+					break;
+				case "D":
+					dollar = prompt("How much money do you want to convert to yen(in dollars)");
+					yen = Number(dollar) * 112.17;
+					alert(yen)
+					break;
+				case "Y":
+					yen = prompt("How much money do you want to convert to yen(in dollars)");
+					dollar = Number(yen) * 112.17;
+					alert(dollar)
+					break;
+				default:
+					continue;
+					}
+			program = prompt("Enter F to convert Fahrenheit to Celsius\n\nEnter C to convert Celsius to Fahrenheit\n\nEnter D to convert Dollar to Yen\n\nEnter Y to convert Yen to Dollar");
+			program = program.toUpperCase();
+		}
+	</script>
+</body>
+</html>

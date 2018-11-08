@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>7.8 - Room Service</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		var d = new Date();
+    	var n = d.getHours();
+		var conf;
+		// bonus + 2, automatically detect what time it is instead of asking
+		
+		/* use a switch:
+		switch
+			// 1 am
+			case 1:
+			case 2:
+			case 3:
+			
+			// 2pm
+			case 14:
+			case 15:
+		*/
+		switch(n) {
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+				alert("Continental Breakfast in lobby")
+				break;
+			case 11:
+			case 12:
+				conf = confirm("The restaurant is open, do you want a reservation?")
+				if (conf) {
+					alert("You have a reservation at " + n + ":30")
+				}
+				break;
+			case 13:
+			case 14:
+			case 15:
+			case 16:
+			case 17:
+			case 18:
+			case 19:
+			case 20:
+			case 21:
+				conf = confirm("The restaurant is open, do you want a reservation. You can also get room service")
+				if (conf) {
+					alert("You have a reservation at " + n + ":30")
+				}
+				break;
+			default:
+				alert("Go get a snack or wait")
+				break;
+					  }
+
+	</script>
+</body>
+</html>

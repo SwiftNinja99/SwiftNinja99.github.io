@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hangman</title>
+	<style>
+		img {
+			display:block;
+  			width:100%; height:100%;
+  			object-fit: cover;
+		}
+	</style>
+</head>
+<body>
+	<a href="../index.htm"><img src="../picsandgifs/omfgdogs.gif" alt="Home"></a>
+	<a href="../index.htm"><img src="../picsandgifs/omfgdogs.gif" alt="Home"></a>
+	<a href="../index.htm"><img src="../picsandgifs/omfgdogs.gif" alt="Home"></a>
+	<script type="text/javascript">
+		var wordList = [
+			"hangman", "chairs", "backpack", "bodywash", "clothing",
+             "computer", "python", "program", "glasses", "sweatshirt",
+             "sweatpants", "mattress", "friends", "clocks", "biology",
+             "algebra", "suitcase", "knives", "ninjas", "shampoo", "chara", "geometry"
+		];
+		
+		var word = wordList[Math.floor(Math.random() * wordList.length)];
+		
+		var lives = 2;
+		var answerArray = [];
+		
+		for (var i = 0; i< word.length; i++) {
+			answerArray[i] = '_';
+		}
+		
+		var remainingLetters = word.length;
+		
+		while (remainingLetters>0) {
+			alert(answerArray.join(" "));
+			
+			var guess = prompt("Guess a letter, or press cancel to exit.");
+			
+			guess = guess.toLowerCase();
+			
+			if (guess == null) {
+				break;
+			}
+			
+			else if (guess.length !== 1 ) {
+				alert("You can only enter one letter at a time");
+			}
+			
+			else {
+				var counter = 0;
+				for (var i = 0; i< word.length; i++) {
+					if (word[i] === guess) {
+						if (answerArray[i] == '_') {
+							answerArray[i] = guess;
+							remainingLetters--;
+						}
+						else {
+							counter++;
+	
+						
+					}
+				}
+			}
+		}
+			if (counter == word.length) {
+				lives--;
+				alert("You have " + lives + " left.");
+				if (lives == 0) {
+					alert("you failed");
+				}
+			}
+		}
+		alert(answerArray.join(" "));
+		alert("Great job! The word was " + word)
+	</script>
+	<script>alert("click the doggos to go home")</script>
+</body>
+</html>
