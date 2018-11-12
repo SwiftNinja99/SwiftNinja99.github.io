@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+		<p id="Christmas"></p>
+
+	<script type="text/javascript">
+		var daysOfChristmas=11;
+        var lyric="";
+        var gifts = [
+            "A Partridge in a Pear Tree",
+            "Two Turtle Doves",
+            "Three French Hens",
+            "Four Calling Birds",
+            "Five Gold Rings",
+            "Six Geese a-Laying",
+            "Seven Swans a-Swimming",
+            "Eight Maids a-Milking",
+            "Nine Ladies Dancing",
+            "Ten Lords a-Leaping",
+            "Eleven Pipers Piping",
+            "Twelve Drummers Drumming"
+        ];
+        var giftsRec="";
+
+        var christmas = document.getElementById("Christmas");
+
+        for(i=0; i<=daysOfChristmas; i++)
+        {
+            dayNum=i+1;
+            if(i==0){
+              sep=".";
+            }else if(i==1){
+              sep=" and ";
+            }else{
+              sep=", ";
+            }
+            giftsRec = gifts[i] + sep + giftsRec;
+            lyric = "<p>On the " + getGetOrdinalSuffix(dayNum) + " day of Christmas my true love gave to me... <br>"
+            + giftsRec + "</p><br>";
+            //console.log(lyric);
+            christmas.innerHTML += lyric;
+
+        }
+
+        function getGetOrdinalSuffix(n) {
+          var s=["th","st","nd","rd"],
+          v=n%100;
+          return n+(s[(v-20)%10]||s[v]||s[0]);
+       }
+	</script>
+</body>
+</html>
