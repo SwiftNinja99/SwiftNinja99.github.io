@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Untitled Document</title>
+	<script type="text/javascript">
+		function enterNum() {
+			var x = document.getElementById("input").value;
+			try {
+				if(x == "") throw "empty";
+				if(isNaN(x)) throw "not number";
+				x = Number(x);
+				if(x<5) throw "too low";
+				if(x>10) throw "too high";
+			}
+			catch(err) {
+				alert(err)
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<p>enter number between 5 and 10</p>
+	<input id="input" type="text">
+	<input type="button" value="test" onClick="enterNum()">
+	<p id="message"></p>
+</body>
+</html>
