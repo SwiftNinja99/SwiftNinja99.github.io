@@ -4,16 +4,22 @@
 	<meta charset="UTF-8">
 	<title>Untitled Document</title>
 	<script type="text/javascript">
-		var cookies = 0
-		function cookieClick() {
-			cookies++
-			document.getElementById("output").innerHTML = cookies;
-		}
+		var CookieClicker = {
+			cookies: 0,
+			click: function() {
+				this.cookies++;
+				this.update_screen();
+			},
+			update_screen: function() {
+				document.getElementById("output").innerHTML = this.cookies;
+			}
+		};
 	</script>
+	<link href="../stylesheets/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
-	<a href="JavaScript:cookieClick()"><img src="../picsandgifs/goldCookie.png" alt="Cookie"></a>
-	<p id="output"></p>
+<body style="background-image: url(../picsandgifs/Space.gif)">
+	<a href="JavaScript:CookieClicker.click()"><img src="../picsandgifs/goldCookie.png" alt="Cookie"></a>
+	<p id="output">0</p>
 </body>
 </html>
