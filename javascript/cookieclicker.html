@@ -2,18 +2,37 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Untitled Document</title>
+	<title>Cookie Clicker</title>
 	<script type="text/javascript">
 		var CookieClicker = {
 			cookies: 0,
 			click: function() {
 				this.cookies++;
+				if (typeof(Storage) !== "undefined") {
+					localStorage.setItem("cookies", this.cookies);
+				}
+				else {
+					console.log("Your browser doesn't support local storage. Don't reload.")
+				}
 				this.update_screen();
 			},
 			update_screen: function() {
 				document.getElementById("output").innerHTML = this.cookies;
+			},
+			init: function() {
+				if (typeof(Storage) !== "undefined") {
+					var c = localStorage.getItem("cookies");
+					if (c != null) {
+					CookieClicker.cookies = Number(c);
+					CookieClicker.update_screen();
+					}
+				}
+				else {
+					console.log("Your browser doesn't support local storage. Don't reload.")
+				}
 			}
 		};
+		window.onload = CookieClicker.init;
 	</script>
 	<link href="../stylesheets/style.css" rel="stylesheet" type="text/css">
 </head>

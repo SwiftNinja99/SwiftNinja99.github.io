@@ -7,21 +7,31 @@
 
 <body>
 	<script type="text/javascript">
-		function compare(playerChoice, computerChoice) {
+		function compare() {
 			// compare inputs
-			
+			if (c == p) {alert("Tie!")}
+			if (c == 1 && p ==2) {alert("Player wins!")}
+			if (c == 2 && p ==1) {alert("Player loses.")}
+			if (c == 1 && p ==3) {alert("Player loses.")}
+			if (c == 3 && p ==1) {alert("Player wins!")}
+			if (c == 2 && p ==3) {alert("Player wins!")}
+			if (c == 3 && p ==2) {alert("Player loses.")}
 			
 			// print who wins
 			
 			
 		}
-		
-		// calculate computer choice
-		var c;
-		// ask player for their choice
+		var c; 
 		var p;
-		// call function
-		compare(p, c);
+		while (p != "") {
+			// calculate computer choice
+			c = Math.ceil(Math.random() * 3);
+			// ask player for their choice
+			p = Number(prompt("Enter a number between 1 and 3, 1 is scissors, 2 is rock, and 3 is paper"));
+			// call function
+			compare();
+		}
+		
 	</script>
 </body>
 </html>

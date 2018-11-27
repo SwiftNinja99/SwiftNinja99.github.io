@@ -8,6 +8,12 @@
 <body>
 	<script type="text/javascript">
 		var x;
+		var one = 0;
+		var two = 0;
+		var three = 0;
+		var four = 0;
+		var five = 0;
+		var six = 0;
 		function diceRoller() {
 			// calculate roll
 			var roll = Math.ceil(Math.random() * 6);
@@ -28,9 +34,38 @@
 			x=diceRoller()
 			switch(x) {
 				case 1:
-					
+					one++;
+					break;
+				case 2:
+					two++;
+					break;
+				case 3:
+					three++
+					break;
+				case 4:
+					four++
+					break;
+				case 5:
+					five++
+					break;
+				case 6:
+					six++
+					break;
 				}
 		}
+		document.write("<br>How many times each number was called when the dice was rolled 100 times, from one to six<br>")
+		document.write(one)
+		document.write("<br>")
+		document.write(two)
+		document.write("<br>")
+		document.write(three)
+		document.write("<br>")
+		document.write(four)
+		document.write("<br>")
+		document.write(five)
+		document.write("<br>")
+		document.write(six)
+		document.write("<br>")
 	</script>
 </body>
 </html>
