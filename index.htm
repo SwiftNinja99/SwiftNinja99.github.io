@@ -1,39 +1,51 @@
 <!doctype html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
-		<title>Home Page</title>
-		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<title>Calculator</title>
+		<style>
+			input {
+				color: #00ff00;
+				background-color: #00000000;
+			}
+		</style>
 	</head>
-	<body>
-		<div id="wrapper">
-			<div id="header">
-				<h1 align="center"><a href="https://en.wikipedia.org/wiki/Communism">☭</a>My Website<a href="https://en.wikipedia.org/wiki/Communism">☭</a></h1>
-			</div>
 
-			<div id="content">
-				<h2>About Me</h2>
-				<p>Insert text here</p></div>
-			<div id="sidebar" align="left">
-				<h2>Navigation</h2>
-				<!-- Anchor links
-				<a href="javascript/calculator.html">calculator</a><br>
-				<a href="https://github.com/SwiftNinja99/SwiftNinja99.github.io">my github</a><br>
-				<a href = "javascript/hangman.html">hangman</a><br>
-				the next ones are js buttons-->
-				<form>
-					<input type="button" value="Hangman" onClick="self.location='javascript/hangman.html'"><br>
-					<input type="button" value="Calculator" onClick="self.location='javascript/calculator.html'"><br>
-					<input type="button" value="My Music Downloads" onClick="self.location='music-downloads.html'"><br>
-				</form>
-			</div>
+	<body style="text-align: center; background-color: #000000">
+		<form name="Calc" method="post" style="align-content: center; display: inline-block">
+	    <strong style="align-content: center">
+	        <table border="4" style="align-content: center">
+	            <tbody>
+	                <tr>
+	                    <td>
+	                        <input type="text" name="Input" size="16"><br>
+	                    </td>
+	                </tr>
+	                <tr>
+	                    <td>
+	                    <input type="button" name="one" value="  1  " onclick="Calc.Input.value += '1'">
+	                    <input type="button" name="two" value="  2  " onclick="Calc.Input.value += '2'">
+	                    <input type="button" name="three" value="  3  " onclick="Calc.Input.value += '3'">
+	                    <input type="button" name="plus" value="  +  " onclick="Calc.Input.value += ' + '"><br>
+	                    <input type="button" name="four" value="  4  " onclick="Calc.Input.value += '4'">
+	                    <input type="button" name="five" value="  5  " onclick="Calc.Input.value += '5'">
+	                    <input type="button" name="six" value="  6  " onclick="Calc.Input.value += '6'">
+	                    <input type="button" name="minus" value="  -  " onclick="Calc.Input.value += ' - '"><br>
+	                    <input type="button" name="seven" value="  7  " onclick="Calc.Input.value += '7'">
+	                    <input type="button" name="eight" value="  8  " onclick="Calc.Input.value += '8'">
+	                    <input type="button" name="nine" value="  9  " onclick="Calc.Input.value += '9'">
+	                    <input type="button" name="times" value="  ×  " onclick="Calc.Input.value += ' * '"><br>
+	                    <input type="button" name="clear" value="  C  " onclick="Calc.Input.value = ''">
+	                    <input type="button" name="zero" value="  0  " onclick="Calc.Input.value += '0'">
+	                    <input type="button" name="DoIt" value="  =  " onclick="Calc.Input.value = eval(Calc.Input.value)">
+	                    <input type="button" name="div" value="  ÷  " onclick="Calc.Input.value += ' / '"><br>
+	                    </td>
+	                </tr>
+	            </tbody>
+	        </table>
+	    </strong>
+		</form>
 
-			<div id="footer">
-				<p style="color: #00000000">&copy; Copyright Viraj</p>
-			</div>
-
-		</div>
 
 	</body>
 </html>

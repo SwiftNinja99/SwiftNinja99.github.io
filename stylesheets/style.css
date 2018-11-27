@@ -1,6 +1,6 @@
 /* CSS */
 body {
-	color: #9D00FF;
+	color: #9500Ff;
 	/*background-image: url("../picsandgifs/omfgdogs.gif");
     margin: 0;
     padding: 0;*/
@@ -72,7 +72,7 @@ RESPONSIVE WIDTH (MEDIA QUERIES)
 ********************************************************/
 /* for 980px or less */
 @media screen and (max-width: 980px) {
-	
+
 	#wrapper {
 		width: 94%;
 	}
@@ -111,8 +111,8 @@ RESPONSIVE WIDTH (MEDIA QUERIES)
 }
 
 /* iPhone 5S */
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 568px) {
 	body {
 		font-size: 40px;

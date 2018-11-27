@@ -8,17 +8,27 @@
 <body>
 	<script type="text/javascript">
 		function isLeapYear(year) {
-			// check if year is a leap year
-			// if it's a leap year
-				//return true
-			// else
-				// return false
+			if (year % 4 === 0) {
+				if (year % 100 === 0 && year % 400 !== 0) {
+					return(false);
+				}
+				else {
+					return(true);
+				}
+			}
+			else {
+				return(false)
+			}
 		}
-		
+
 		var y = Number(prompt("Enter a year"));
-		
+
 		// prints either true or false
-		document.write(isLeapYear(y));
+		alert(isLeapYear(y));
+
+		for (var i = 2000; i <= 2018; i++) {
+			document.write(i + "=" + isLeapYear(i) + "<br>")
+		}
 	</script>
 </body>
 </html>
